@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  background: black;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container-custom {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.gold-text {
+  background: linear-gradient(to right, #facc15, #fde68a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.gold-btn {
+  background: linear-gradient(to right, #facc15, #fde68a);
+  color: black;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.gold-btn:hover {
+  transform: scale(1.03);
+}
+
+@keyframes floatCoin {
+  0%,100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.coin-animation {
+  animation: floatCoin 4s ease-in-out infinite;
+}
